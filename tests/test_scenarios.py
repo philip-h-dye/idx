@@ -103,11 +103,10 @@ groups:
 
         result = '\n' + mock_out.getvalue()
 
-        with open(f'log/out/{test_name}/result', 'w') as r, open('expected', 'w') as e :
-            r.write( result )
-
-        with open(f'log/out/{test_name}/expected', 'w') as e:
-            e.write( expected )
+        # with open(f'log/out/{test_name}/result', 'w') as r, open('expected', 'w') as e :
+        #     r.write( result )
+        # with open(f'log/out/{test_name}/expected', 'w') as e:
+        #     e.write( expected )
 
         self.assertEqual ( result, expected )
 
