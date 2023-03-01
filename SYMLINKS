@@ -1,0 +1,4 @@
+./s : idx
+./t/import.py : ../tests/test_import.py
+./t/parser.py : ../tests/test_parser.py
+./t/scenarios.py : ../tests/test_scenarios.py

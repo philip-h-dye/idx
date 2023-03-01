@@ -1,0 +1,8 @@
+**/*.pyc
+**/*~
+log
+# .alias
+.local
+.local.undo
+snapshot
+HOLD

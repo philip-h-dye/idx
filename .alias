@@ -1,0 +1,25 @@
+#
+
+module=$( echo $PWD | sed -e 's/^.*\///' )
+
+alias c='( clear && invoke clean )'
+
+if [ -x ~/.local/bin/logts ] ; then
+    alias b='( clear && logts -b log/build invoke build )'
+    alias t='( clear && logts -b log/test invoke test )'
+    alias inst='( clear && logts -b log/install invoke install && echo "install path = $( which-module ${module} )" )'
+else
+    alias b='( clear && invoke build )'
+    alias t='( clear && invoke test )'
+    alias inst='( clear && invoke install && echo "install path = $( which-module ${module} )" )'
+fi
+
+alias re='( c && b && t )'
+
+alias pyhere=' PYTHONPATH=".:${PYTHONPATH}" python'
+
+# function pyhere() { } -- perhaps to allow alternate commands, not necessary yet.
+
+alias xt=' PYTHONPATH=".:${PYTHONPATH}" logts -b log/test pytest '
+
+#
